@@ -1,0 +1,50 @@
+
+.container{
+    font-style:ubuntu;
+    background-color:#d7f0fd; 
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 2s easeIn 0s;
+}
+
+.closeButton{
+    border:0px;
+    background-color: rgb(198, 15, 15);
+    border-radius: 60px;
+    position: fixed;
+    Margin:right;
+    display: flex;
+    transition: 0.5s;    
+    color: white
+}
+
+.closeButton:hover{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+}
+
+.container:hover{
+    opacity: 0.9;
+}
+
+.imagen{ 
+    border-radius: 180px;
+}
+
+.centerName{
+    display: flex;
+    justify-content: center;
+}
+
+.description{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 0em;
+
+
+}
