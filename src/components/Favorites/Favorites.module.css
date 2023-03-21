@@ -1,0 +1,28 @@
+
+
+.closeButton:hover{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+}
+
+.container:hover{
+    opacity: 0.9;
+}
+
+.imagen{ 
+    border-radius: 180px;
+}
+
+.centerName{
+    display: flex;
+    justify-content: center;
+}
+
+.description{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 0em;
+
+
+}

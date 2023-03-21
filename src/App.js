@@ -1,6 +1,7 @@
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
-import style from "./components/Nav/App.module.css";
+import Favorites from "./components/Favorites/Favorites.jsx";
+import style from "./components/Nav/Nav.module.css"
 import {useState}  from "react";
 import { Route } from "react-router-dom";
 import {Routes} from "react-router-dom";
@@ -19,7 +20,7 @@ const location = useLocation ();
 const [access, setAccess] = useState(false)
 
 const username = "kcabello2@hotmail.com"
-const password = "123Qwe!"
+const password = "123qweasd"
 
 const login = (userData) =>{
 if (userData.username === username && userData.password === password){
@@ -66,12 +67,13 @@ const onClose = (id) =>{
   return (
     <div className="App" style={{ padding: "25px" }}>
       {location.pathname === "/" ? <Form login ={login}/> : <Nav onSearch={onSearch} /> }
-      {/* <div className={style.nav}> */}
+      <div className={style.nav}/>
      <Routes>
       <Route
       path="/home" element = {<Cards onClose = {onClose} characters={characters}  />} />
       <Route path="/about" element ={<About/>} />
       <Route path="detail/:detailId" element ={<Detail />} />
+      <Route path="/favorites" element ={<Favorites/>} />
        </Routes>
 
        {/* </div> */}

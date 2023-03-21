@@ -1,14 +1,10 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { orderCards , filterCards} from "../../Redux/actions";
-import { useSelector } from "react-redux";
-import style from "./Card.module.css";
-
+import style from "./Favorites.module.css";
+import { Link } from "react-router-dom";
 const Favorites = () =>{
-    
-
-
-    const favorites = React.useSelector (state => state.myFavorites)
+const {myFavorites} = useSelector (state => state) 
 
     const dispatch = useDispatch();
     const handleOrder = (event) =>{
@@ -28,7 +24,6 @@ const Favorites = () =>{
             <option value="Ascendente">Ascendente</option>
             <option value="Descendente">Descendente</option>   
             </select>   
-
             <select onChange={handleFilter}>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -38,7 +33,7 @@ const Favorites = () =>{
 
             </select>
         </div>
-            {favorites.map(({ id, name, species, gender, image }) => {
+            {myFavorites.map(({ id, name, species, gender, image }) => {
                     return (
                         <div> 
                         <Link to = {`/detail/${id}`}>
@@ -48,7 +43,7 @@ const Favorites = () =>{
                         <h2 className={style.description}>Species: {species}</h2> 
                         <h2 className={style.description}>Gender: {gender}</h2>
                         </div>
-                    );
+                    )
                  })};
              </>
            )      

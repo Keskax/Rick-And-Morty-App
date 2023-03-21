@@ -1,0 +1,33 @@
+/* Navbar.module.css */
+
+.navbar {
+    display: flex; /* Flexbox para alinear los elementos */
+    background-color:red;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar__logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto; /* Empuja el elemento hacia la izquierda */
+  }
+  
+  .navbar__menu {
+    display: flex;
+  }
+  
+  .navbar__item {
+    margin-left: 20px; /* Espacio entre los elementos */
+  }
+  
+  .navbar__item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .navbar__item a:hover {
+    background-color: #111;
+  }
+  

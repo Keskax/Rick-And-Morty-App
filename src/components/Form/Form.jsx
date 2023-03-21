@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Validation from "./validation";
+import style from "../../components/Estilos/login.module.css"
+
 
 const Form = ({ login }) =>{
 
@@ -33,8 +35,8 @@ const Form = ({ login }) =>{
     }
 
     return(
-
-        <form onSubmit={handleSubmit}>
+        <div className={style.container}>  
+        <form className={style.form} onSubmit={handleSubmit}>
                 <label htmlFor ="Username">Username:</label>
                 <input type="text" name = "username" value ={userData.username} onChange={handleInputChange} />
                 {errors.username && <p>{errors.username}</p>}
@@ -43,6 +45,7 @@ const Form = ({ login }) =>{
                 {errors.password && <p>{errors.password}</p>}
                 <button>LOGIN</button>
         </form>
+        </div>
 
     )
 }

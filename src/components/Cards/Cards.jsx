@@ -1,7 +1,7 @@
 import Card from "../Card/Card";
 import { CardsContainer } from "./styledComponents";
 
-export default function Cards({ characters, onClose}) {
+function Cards({ characters, onClose}) {
   return (
     <CardsContainer>
       {characters.map(({ id, name, species, gender, image }) => {
@@ -18,5 +18,7 @@ export default function Cards({ characters, onClose}) {
         );
       })}
     </CardsContainer>
-  );
+  )
 }
+
+export default Cards;

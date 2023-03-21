@@ -9,9 +9,10 @@
 }
 
 .searchButton{
+    
     border: px;
     border-radius:0px 15px 15px 0px;
-    background-color:#385170;
+
     height: 3em;
     font-weight: bold;
     justify-content: space-between;
